@@ -1,0 +1,19 @@
+# Copy to .github/workflows/plugin-version-guard.yml in your plugin repository.
+# Fails a pull request when plugin files changed but the version wasn't bumped.
+name: plugin-version-guard
+on:
+  pull_request:
+jobs:
+  versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # full history so the base branch can be compared
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch the checker
+        run: curl -fsSL -o check_versions.py https://raw.githubusercontent.com/TejaChilumula/plugin-version-guard/main/scripts/check_versions.py
+      - name: Check plugin versions
+        run: python3 check_versions.py --ci --base "origin/${{ github.base_ref }}"

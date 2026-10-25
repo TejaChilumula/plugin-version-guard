@@ -1,0 +1,12 @@
+{
+  "name": "plugin-version-guard",
+  "owner": { "name": "Teja Chilumula" },
+  "description": "Plugin Version Guard: catch Claude Code plugin releases your users would never receive.",
+  "plugins": [
+    {
+      "name": "plugin-version-guard",
+      "source": "./",
+      "description": "Warns before pushing plugin changes without a version bump, and makes releases one step."
+    }
+  ]
+}

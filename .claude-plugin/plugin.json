@@ -1,0 +1,19 @@
+{
+  "name": "plugin-version-guard",
+  "displayName": "Plugin Version Guard",
+  "version": "0.1.3",
+  "description": "Stops you from shipping Claude Code plugin changes your users will never receive. Warns before git push when plugin files changed without a version bump, catches plugin.json/marketplace.json version mismatches, and gives you a one-step release skill.",
+  "author": {
+    "name": "Teja Chilumula"
+  },
+  "homepage": "https://github.com/TejaChilumula/plugin-version-guard",
+  "repository": "https://github.com/TejaChilumula/plugin-version-guard",
+  "license": "MIT",
+  "keywords": [
+    "plugin-development",
+    "release",
+    "versioning",
+    "marketplace",
+    "ci"
+  ]
+}
