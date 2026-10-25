@@ -72,3 +72,17 @@ MIT
 ## Disclaimer
 
 Plugin Version Guard is an independent community project. It is not made, endorsed, or supported by Anthropic. "Claude" and "Claude Code" are trademarks of Anthropic, used here only to describe compatibility.
+
+## Example prompts
+
+1. "Push my plugin changes." If plugin files changed without a version bump, you're asked to confirm before the push runs.
+2. "/plugin-version-guard:release" then choose "patch". Bumps the version, syncs marketplace.json, validates and commits.
+3. "/plugin-version-guard:check". Lists every plugin in the repo that changed since your last push without a version bump.
+
+## Support
+
+Questions, bugs and feature requests: open an issue at https://github.com/TejaChilumula/plugin-version-guard/issues
+
+## Security
+
+To report a security vulnerability, please don't open a public issue. Use GitHub's private reporting instead: https://github.com/TejaChilumula/plugin-version-guard/security/advisories/new, or email tejachilumula07@gmail.com. Reports are acknowledged within 7 days.
