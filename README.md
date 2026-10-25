@@ -52,7 +52,7 @@ python3 scripts/bump_version.py path/to/plugin patch --dry-run
 3. Resolves each plugin's effective version the way Claude Code does: `plugin.json`, then the plugin's `marketplace.json` entry, then the commit SHA.
 4. Reports a problem when relevant files changed but the effective version is the same.
 
-The pre-push hook checks what the push will send: your committed changes, plus anything a commit in the same command is about to record. Running the checker by hand also includes uncommitted changes, so you see the state you're about to commit; pass `--committed` to check only the last commit.
+The pre-push hook checks what the push will send: your committed changes, plus anything a commit in the same command is about to record. Running the checker by hand also includes uncommitted changes, so you see the state you're about to commit; add the `--committed` flag to check only the last commit.
 
 ## Privacy Policy
 
